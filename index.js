@@ -10,7 +10,15 @@ function map(array, callback) {
 }
 
 function reduce(array, callback, start = 0) {
-
+let trueValue=0
+  for (let i = 0; i < array.length; i++) {
+    if(array[i]){
+      trueValue++
+    }
+  }
+  if(trueValue>0){
+    return true
+  }
     let checkNumber = true;
     let checkString = false
     for (let i = 0; i < array.length; i++) {
