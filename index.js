@@ -45,7 +45,7 @@ function reduce(array, callback, start = 0) {
                 checkFalse++
             }
         }
-       if(checkFalse>0){
+       if(checkFalse>=1){
          return false
        }
        else if (checkTrue == array.length||checkFalse==0||trueValue>=array.length-1) {
