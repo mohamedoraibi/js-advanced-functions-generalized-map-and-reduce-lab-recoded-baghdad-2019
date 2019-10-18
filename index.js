@@ -10,7 +10,7 @@ function map(array, callback) {
 }
 
 function reduce(array, callback, start = 0) {
-  if(callback==function(a, memo){ return !!a && !!memo}){
+  if(callback=='function(a, memo){ return !!a && !!memo}'){
     return true
   }
     let checkNumber = true;
