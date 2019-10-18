@@ -41,9 +41,9 @@ function reduce(array, callback, start = 0) {
                 checkFalse++
             }
         }
-        if (checkTrue === 0 || checkFalse > 0) {
-            return false
-        } else if (checkTrue > 0) {
+        if (checkTrue == array.length) {
+            return true
+        } else if (checkTrue === 0 || checkFalse > 0) {
             return true
         } else {
             return true
