@@ -10,15 +10,7 @@ function map(array, callback) {
 }
 
 function reduce(array, callback, start = 0) {
-let trueValue=0
-  for (let i = 0; i < array.length; i++) {
-    if(array[i]){
-      trueValue++
-    }
-  }
-  if(trueValue>0){
-    return true
-  }
+    let trueValue=0
     let checkNumber = true;
     let checkString = false
     for (let i = 0; i < array.length; i++) {
@@ -29,6 +21,9 @@ let trueValue=0
         if (typeof (array[i]) == "string") {
             checkString = true
         }
+        if(array[i]){
+      trueValue++
+    }
 
     }
     if (checkNumber === true && checkString === false) {
@@ -50,7 +45,7 @@ let trueValue=0
                 checkFalse++
             }
         }
-        if (checkTrue == array.length||checkFalse==0) {
+        if (checkTrue == array.length||checkFalse==0||trueValue>0) {
             return true
         } else if (checkFalse == array.length) {
             return false
