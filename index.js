@@ -34,10 +34,10 @@ function reduce(array, callback, start = 0) {
         let checkFalse = 0
         for (let i = 0; i < array.length; i++) {
             newArray = callback(array[i])
-            if (newArray === true) {
+            if (newArray) {
                 checkTrue++
             }
-            if (newArray === false) {
+            if (!newArray) {
                 checkFalse++
             }
         }
