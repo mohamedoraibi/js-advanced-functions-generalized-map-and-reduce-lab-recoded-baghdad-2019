@@ -43,8 +43,8 @@ function reduce(array, callback, start = 0) {
         }
         if (checkTrue == array.length) {
             return true
-        } else if (checkTrue === 0 || checkFalse > 0) {
-            return true
+        } else if (checkFalse == array.length) {
+            return false
         } else {
             return true
         }
